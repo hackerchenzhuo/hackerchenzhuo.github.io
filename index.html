@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Zhuo Chen</title>
-<meta name="keywords" content="Zhuo Chen, Zhejiang University, Multi-modal Learning, Large Language Models, Knowledge Graph, AI for Medicine">
+<meta name="keywords" content="Zhuo Chen, Zhejiang University, Multi-modal Learning, Large Language Models, AI for Medicine, Knowledge Graph">
 <meta name="description" content="Zhuo Chen&#39;s home page">
 <link rel="stylesheet" href="./css/jemdoc.css" type="text/css">
 
@@ -60,83 +60,25 @@
 
 <p>
 I received my Ph.D. in Computer Science from Zhejiang University (2020&ndash;2025), advised by Prof. <a href="https://person.zju.edu.cn/en/huajun">Huajun Chen</a> at the <a href="https://www.zjukg.org/">ZJUKG-Lab</a>.
-My [<a href="https://arxiv.org/abs/2402.05391">research</a>] lies broadly in <b>multi-modal learning</b> and <b>large language models</b>, with structured knowledge (knowledge graphs, ontologies, symbolic constraints) as a recurring thread, and with a growing focus on <b>AI for Medicine (AI4Medical)</b>.
-Concretely, my current interests include:
+My research lies broadly in <b>multi-modal learning</b> and <b>large language models</b>, with structured knowledge as a recurring thread
+(see our survey <a href="https://www.sciencedirect.com/science/article/pii/S1566253525002325">Knowledge Graphs for Multi-modal Learning: Survey and Perspective</a>, <i>Information Fusion</i> 2025 &nbsp;[<a href="https://arxiv.org/abs/2402.05391">arXiv</a>][<a href="https://github.com/zjukg/KG-MM-Survey">repo</a>]).
+Going forward, I am increasingly devoted to <b>AI for Medicine (AI4Medical)</b>.
 </p>
 <ul>
-	<li><b>Multi-modal Learning &amp; MLLMs</b>: fine-grained modality tokenization, fusion and alignment under noisy / missing / imbalanced modalities; structured &amp; abstractive visual reasoning; benchmarking and evaluation of MLLMs.</li>
-	<li><b>Large Language Models</b>: post-training and alignment (SFT, preference optimization, RLHF/RLVR, agentic RL), knowledge-grounded and citation-aware generation, LLM agents, and structural knowledge prompting for faithful reasoning.</li>
-	<li><b>AI for Medicine &amp; Science</b>: medical / biomolecular foundation models and agents, retrieval- and knowledge-augmented clinical reasoning, and LLM-driven automated research (hypothesis generation, experiment planning, self-evolving research agents).</li>
+	<li><b>Multi-modal Learning &amp; MLLMs</b>: modality tokenization, fusion and alignment under noisy / missing / imbalanced modalities; multi-modal representation learning and reasoning; evaluation of multi-modal foundation models.</li>
+	<li><b>Large Language Models</b>: post-training and alignment (SFT, preference optimization, RLHF / RLVR, agentic RL), LLM agents, and knowledge-augmented, trustworthy generation.</li>
+	<li><b>AI for Medicine</b> (current focus): medical large models and clinical / biomedical <b>agents</b>; domain <b>post-training</b> and RL for verifiable medical reasoning; <b>auto-research</b> agents driven by RL (hypothesis proposal, experiment planning, result verification); and <b>recursive self-improvement (RSI) / self-evolving</b> systems that keep improving from their own experience and feedback.</li>
 </ul>
 <p>
-Across these directions, a central goal is to use <i>knowledge</i> and <i>verifiable signals</i> to mitigate the bias and hallucination that arise from the long-tail distribution of natural data corpora.
+A central goal across these directions is to leverage <i>knowledge</i> and <i>verifiable signals</i> to mitigate the bias and hallucination induced by the long-tail distribution of natural data corpora.
 </p>
 <p>
 <font color="FE4365">If you are interested in my field of work, any form of collaboration and communication is welcome. Please feel free to contact me !</font>
 </p>
 
 
-<h2>Preprints</h2>
-
-<ul>
-	<li>
-		Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey </br>
-		<b>Zhuo Chen</b>, Yichi Zhang, Yin Fang, Yuxia Geng, Lingbing Guo, Xiang Chen, Qian Li, Wen Zhang, Jiaoyan Chen, Yushan Zhu, Jiaqi Li, Xiaoze Liu, Jeff Z. Pan, Ningyu Zhang, Huajun Chen</br>
-		[<a href="https://arxiv.org/abs/2402.05391">arXiv</a>][<a href="https://github.com/zjukg/KG-MM-Survey">Project Page</a>]
-		<p></p>
-	</li>
-	<li>
-		Every Little Helps: Building Knowledge Graph Foundation Model with Fine-grained Transferable Multi-modal Tokens </br>
-		Yichi Zhang, <b>Zhuo Chen</b>, Lingbing Guo, Wen Zhang, Huajun Chen</br>
-		[<a href="https://arxiv.org/abs/2602.15896">arXiv</a>]
-		<p></p>
-	</li>
-	<li>
-		Symbolic and Abstractive Reasoning with Complex Visual Queries </br>
-		Yichi Zhang, Jingdian Lu, <b>Zhuo Chen</b>, Lingbing Guo, Jun Xu, Wen Zhang, Huajun Chen</br>
-		[<a href="https://arxiv.org/abs/2606.09195">arXiv</a>]
-		<p></p>
-	</li>
-	<li>
-		Multi-domain Knowledge Graph Collaborative Pre-training and Prompt Tuning for Diverse Downstream Tasks </br>
-		Yichi Zhang, Binbin Hu, <b>Zhuo Chen</b>, Lingbing Guo, Ziqi Liu, Zhiqiang Zhang, Lei Liang, Huajun Chen, Wen Zhang</br>
-		[<a href="https://arxiv.org/abs/2405.13085">arXiv</a>][<a href="https://github.com/zjukg/MuDoK">Project Page</a>]
-		<p></p>
-	</li>
-	<li>
-		Evaluating the Factuality of Large Language Models using Large-Scale Knowledge Graphs </br>
-		Xiaoze Liu, Feijie Wu, Tianyang Xu, <b>Zhuo Chen</b>, Yichi Zhang, Xiaoqian Wang, Jing Gao</br>
-		[<a href="https://arxiv.org/abs/2404.00942">arXiv</a>][<a href="https://github.com/xz-liu/GraphEval">Project Page</a>]
-		<p></p>
-	</li>
-	<li>
-		ChatCell: Facilitating Single-Cell Analysis with Natural Language </br>
-		Yin Fang, Kangwei Liu, Ningyu Zhang, Xinle Deng, Penghui Yang, <b>Zhuo Chen</b>, Xiangru Tang, Mark Gerstein, Xiaohui Fan, Huajun Chen</br>
-		[<a href="https://arxiv.org/abs/2402.08303">arXiv</a>][<a href="https://github.com/zjunlp/ChatCell">Project Page</a>]
-		<p></p>
-	</li>
-	<li>
-		ASGEA: Exploiting Logic Rules from Align-Subgraphs for Entity Alignment </br>
-		Yangyifei Luo, <b>Zhuo Chen</b>, Lingbing Guo, Qian Li, Wenxuan Zeng, Zhixin Cai, Jianxin Li</br>
-		[<a href="https://arxiv.org/abs/2402.11000">arXiv</a>]
-		<p></p>
-	</li>
-	<li>
-		Universal Multi-modal Entity Alignment via Iteratively Fusing Modality Similarity Paths </br>
-		Bolin Zhu, Xiaoze Liu, Xin Mao, <b>Zhuo Chen</b>, Lingbing Guo, Tao Gui, Qi Zhang</br>
-		[<a href="https://arxiv.org/abs/2310.05364">arXiv</a>]
-		<p></p>
-	</li>
-	<li>
-		Generative Adversarial Zero-shot Learning via Knowledge Graphs</br>
-		Yuxia Geng, Jiaoyan Chen, <b>Zhuo Chen</b>, Zhiquan Ye, Zonggang Yuan, Yantao Jia, Huajun Chen</br>
-		[<a href="https://arxiv.org/abs/2004.03109">arXiv</a>][<a href="https://github.com/genggengcss/ZSL">Project Page</a>]
-		<p></p>
-	</li>
-</ul>
-
-
 <h2>Publications</h2>
+<p><small>★ representative work &nbsp;|&nbsp; * equal contribution</small></p>
 
 <h3>2026</h3>
 <ul>
@@ -189,6 +131,14 @@ Across these directions, a central goal is to use <i>knowledge</i> and <i>verifi
 <h3>2025</h3>
 <ul>
 	<li>
+		★ Knowledge Graphs for Multi-modal Learning: Survey and Perspective</br>
+		<b>Zhuo Chen</b>, Yichi Zhang, Yin Fang, Yuxia Geng, Lingbing Guo, Jiaoyan Chen, Xiaoze Liu, Jeff Z. Pan, Ningyu Zhang, Huajun Chen, Wen Zhang</br>
+		Information Fusion 2025, 121: 103124</br>
+		<small>(journal version of &ldquo;Knowledge Graphs Meet Multi-Modal Learning: A Comprehensive Survey&rdquo;, arXiv:2402.05391)</small></br>
+		[<a href="https://www.sciencedirect.com/science/article/pii/S1566253525002325">Paper</a>][<a href="https://arxiv.org/abs/2402.05391">arXiv</a>][<a href="https://github.com/zjukg/KG-MM-Survey">Project Page</a>]
+		<p></p>
+	</li>
+	<li>
 		Multiple Heads are Better than One: Mixture of Modality Knowledge Experts for Entity Representation Learning</br>
 		Yichi Zhang, <b>Zhuo Chen</b>, Lingbing Guo, Yajing Xu, Binbin Hu, Ziqi Liu, Wen Zhang, Huajun Chen</br>
 		ICLR 2025</br>
@@ -233,7 +183,7 @@ Across these directions, a central goal is to use <i>knowledge</i> and <i>verifi
 		<p></p>
 	</li>
 	<li>
-		Noise-powered Multi-modal Knowledge Graph Representation Framework</br>
+		★ Noise-powered Multi-modal Knowledge Graph Representation Framework</br>
 		<b>Zhuo Chen</b>, Yin Fang, Yichi Zhang, Lingbing Guo, Jiaoyan Chen, Jeff Z. Pan, Huajun Chen, Wen Zhang</br>
 		COLING 2025</br>
 		[<a href="https://arxiv.org/abs/2403.06832">arXiv</a>][<a href="https://github.com/zjukg/SNAG">Project Page</a>]
@@ -379,21 +329,21 @@ Across these directions, a central goal is to use <i>knowledge</i> and <i>verifi
 		<p></p>
 	</li>
 	<li>
-		MEAformer: Multi-modal Entity Alignment Transformer for Meta Modality Hybrid</br>
+		★ MEAformer: Multi-modal Entity Alignment Transformer for Meta Modality Hybrid</br>
 		<b>Zhuo Chen</b>, Jiaoyan Chen, Wen Zhang, Lingbing Guo, Yin Fang, Yufeng Huang, Yichi Zhang, Yuxia Geng, Jeff Z. Pan, Wenting Song, Huajun Chen</br>
 		ACM MM 2023</br>
 		[<a href="https://arxiv.org/abs/2212.14454">arXiv</a>][<a href="https://github.com/zjukg/MEAformer">Project Page</a>]
 		<p></p>
 	</li>
 	<li>
-		Rethinking Uncertainly Missing and Ambiguous Visual Modality in Multi-Modal Entity Alignment</br>
+		★ Rethinking Uncertainly Missing and Ambiguous Visual Modality in Multi-Modal Entity Alignment</br>
 		<b>Zhuo Chen</b>, Lingbing Guo, Yin Fang, Yichi Zhang, Jiaoyan Chen, Jeff Z. Pan, Yangning Li, Huajun Chen, Wen Zhang</br>
 		ISWC 2023 (Best Paper Candidate)</br>
 		[<a href="https://arxiv.org/abs/2307.16210">arXiv</a>][<a href="https://github.com/zjukg/UMAEA">Project Page</a>]
 		<p></p>
 	</li>
 	<li>
-		DUET: Cross-modal Semantic Grounding for Contrastive Zero-shot Learning</br>
+		★ DUET: Cross-modal Semantic Grounding for Contrastive Zero-shot Learning</br>
 		<b>Zhuo Chen</b>, Yufeng Huang, Jiaoyan Chen, Yuxia Geng, Wen Zhang, Yin Fang, Jeff Z. Pan, Huajun Chen</br>
 		AAAI 2023 (Oral)</br>
 		[<a href="https://ojs.aaai.org/index.php/AAAI/article/view/25114">Paper</a>][<a href="https://arxiv.org/abs/2207.01328">arXiv</a>][<a href="https://github.com/zjukg/DUET">Project Page</a>]
@@ -447,7 +397,7 @@ Across these directions, a central goal is to use <i>knowledge</i> and <i>verifi
 <ul>
 	<li>
 		De Novo Analysis of Bulk RNA-seq Data at Spatially Resolved Single-cell Resolution</br>
-		Jie Liao*, Jingyang Qian*, Yin Fang*, <b>Zhuo Chen*</b>, Xiang Zhuang*, Ningyu Zhang, Xin Shao, Yining Hu, Penghui Yang, Junyun Cheng, Yang Hu, Lingqi Yu, Haihong Yang, Jinlu Zhang, Xiaoyan Lu, Li Shao, Dan Wu, Yue Gao, Huajun Chen, Xiaohui Fan (* equal contribution)</br>
+		Jie Liao*, Jingyang Qian*, Yin Fang*, <b>Zhuo Chen*</b>, Xiang Zhuang*, Ningyu Zhang, Xin Shao, Yining Hu, Penghui Yang, Junyun Cheng, Yang Hu, Lingqi Yu, Haihong Yang, Jinlu Zhang, Xiaoyan Lu, Li Shao, Dan Wu, Yue Gao, Huajun Chen, Xiaohui Fan</br>
 		Nature Communications 2022 (Editors' Highlights, Top 25 in 2022)</br>
 		[<a href="https://www.nature.com/articles/s41467-022-34271-z">Paper</a>][<a href="https://github.com/ZJUFanLab/bulk2space">Project Page</a>]
 		<p></p>
@@ -503,6 +453,54 @@ Across these directions, a central goal is to use <i>knowledge</i> and <i>verifi
 		Jiaoyan Chen, Yuxia Geng, <b>Zhuo Chen</b>, Ian Horrocks, Jeff Z. Pan, Huajun Chen</br>
 		IJCAI 2021 (Survey Track)</br>
 		[<a href="https://arxiv.org/abs/2103.00070">arXiv</a>]
+		<p></p>
+	</li>
+</ul>
+
+
+<h2>Preprints</h2>
+
+<ul>
+	<li>
+		Every Little Helps: Building Knowledge Graph Foundation Model with Fine-grained Transferable Multi-modal Tokens </br>
+		Yichi Zhang, <b>Zhuo Chen</b>, Lingbing Guo, Wen Zhang, Huajun Chen</br>
+		[<a href="https://arxiv.org/abs/2602.15896">arXiv</a>]
+		<p></p>
+	</li>
+	<li>
+		Symbolic and Abstractive Reasoning with Complex Visual Queries </br>
+		Yichi Zhang, Jingdian Lu, <b>Zhuo Chen</b>, Lingbing Guo, Jun Xu, Wen Zhang, Huajun Chen</br>
+		[<a href="https://arxiv.org/abs/2606.09195">arXiv</a>]
+		<p></p>
+	</li>
+	<li>
+		Multi-domain Knowledge Graph Collaborative Pre-training and Prompt Tuning for Diverse Downstream Tasks </br>
+		Yichi Zhang, Binbin Hu, <b>Zhuo Chen</b>, Lingbing Guo, Ziqi Liu, Zhiqiang Zhang, Lei Liang, Huajun Chen, Wen Zhang</br>
+		[<a href="https://arxiv.org/abs/2405.13085">arXiv</a>][<a href="https://github.com/zjukg/MuDoK">Project Page</a>]
+		<p></p>
+	</li>
+	<li>
+		Evaluating the Factuality of Large Language Models using Large-Scale Knowledge Graphs </br>
+		Xiaoze Liu, Feijie Wu, Tianyang Xu, <b>Zhuo Chen</b>, Yichi Zhang, Xiaoqian Wang, Jing Gao</br>
+		[<a href="https://arxiv.org/abs/2404.00942">arXiv</a>][<a href="https://github.com/xz-liu/GraphEval">Project Page</a>]
+		<p></p>
+	</li>
+	<li>
+		ASGEA: Exploiting Logic Rules from Align-Subgraphs for Entity Alignment </br>
+		Yangyifei Luo, <b>Zhuo Chen</b>, Lingbing Guo, Qian Li, Wenxuan Zeng, Zhixin Cai, Jianxin Li</br>
+		[<a href="https://arxiv.org/abs/2402.11000">arXiv</a>]
+		<p></p>
+	</li>
+	<li>
+		Universal Multi-modal Entity Alignment via Iteratively Fusing Modality Similarity Paths </br>
+		Bolin Zhu, Xiaoze Liu, Xin Mao, <b>Zhuo Chen</b>, Lingbing Guo, Tao Gui, Qi Zhang</br>
+		[<a href="https://arxiv.org/abs/2310.05364">arXiv</a>]
+		<p></p>
+	</li>
+	<li>
+		Generative Adversarial Zero-shot Learning via Knowledge Graphs</br>
+		Yuxia Geng, Jiaoyan Chen, <b>Zhuo Chen</b>, Zhiquan Ye, Zonggang Yuan, Yantao Jia, Huajun Chen</br>
+		[<a href="https://arxiv.org/abs/2004.03109">arXiv</a>]
 		<p></p>
 	</li>
 </ul>
