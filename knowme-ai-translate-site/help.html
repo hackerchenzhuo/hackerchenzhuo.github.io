@@ -1,0 +1,136 @@
+<!doctype html><html lang="zh-CN"><head><base href="https://hackerchenzhuo.github.io/knowme-research-ai/"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KnowMe · AI Translate · Guide</title><link rel="icon" href="assets/knowme.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=20261020-r3"><script src="docs.js" defer></script></head><body class="docs-page"><a class="skip-link" href="#doc-main" data-zh="跳到正文" data-en="Skip to content">跳到正文</a><header class="site-header"><nav class="shell navigation" aria-label="Main navigation"><a class="brand" href="index.html" data-home><img src="assets/knowme.svg" width="34" height="34" alt=""><span><span data-zh="知我" data-en="KnowMe">知我</span><span class="brand-en">Research tools</span></span></a><div class="nav-links"><a href="index.html#products" data-home-products data-zh="产品" data-en="Products">产品</a><a href="help.html" data-doc-link data-zh="使用指南" data-en="Guide">使用指南</a></div><div class="nav-actions"><div class="language-switch" aria-label="Site language"><a href="#chinese" lang="zh-CN" data-language="zh">中文</a><span class="language-divider" aria-hidden="true">/</span><a href="#english" lang="en" data-language="en">EN</a></div></div></nav></header><main class="docs-layout shell" id="doc-main"><aside class="docs-nav"><p>KNOWME / DOCS</p><a href="help.html" data-doc-link data-zh="AI 翻译 · 使用指南" data-en="AI Translate · Guide">AI 翻译 · 使用指南</a><a href="privacy.html" data-doc-link data-zh="AI 翻译 · 隐私说明" data-en="AI Translate · Privacy">AI 翻译 · 隐私说明</a><a href="radar-privacy.html" data-doc-link data-zh="论文雷达 · 隐私说明" data-en="Paper Radar · Privacy">论文雷达 · 隐私说明</a></aside><div class="doc-content"><article data-doc-language="zh" id="chinese" lang="zh-CN"><h1>知我AI翻译 · 1.0.2</h1>
+<p>记住你的专业译法，让下一段更合你的习惯。需要 Chrome 116 或更新版本，使用你自己的模型 Key 或获准使用的兼容服务。</p>
+<h2 id="zh-section-1">首次配置与快速入门</h2>
+<p>首次安装会自动打开快速设置。先点「一键开启常用功能」，在浏览器的一次请求中确认网页访问和剪贴板读取；随后自动启用划词“译”按钮、Markdown 排版，并在已有翻译窗口继续阅读。授权这一步不读取剪贴板，也不发起翻译。</p>
+<p>已经完整授权的用户更新时不会再弹引导。缺少权限的旧用户会收到一次集中提醒；拒绝或跳过后不自动重试。仍可展开「查看状态或分别设置」手动调整。</p>
+<p>模型需要自己的 API Key：有连接模板时，进入设置并导入模板，核对服务地址后填写 Key、保存；无需逐项输入地址和型号。模板不含 Key，导入不会自动保存或发请求。已有连接仍可用下拉栏复用。</p>
+<p>也可以从窗口顶部或设置底部重新进入快速入门。展开「查看状态或分别设置」可检查四项真实状态，并按需单独调整：</p>
+<ol>
+<li>模型连接：选择服务、填写自己的 Key，保存并测试。界面的“已配置”表示连接已保存，实际可用性仍需测试。</li>
+<li>浏览器快捷键：显示“打开知我翻译窗口”的实际绑定；点击“设置快捷键”进入浏览器管理页。默认 Mac ⌘⇧Y / Windows Alt+Shift+Y，可自行修改。扩展不会自动替你绑定 ⌘D 或修改其他快捷键。</li>
+<li>剪贴板：一键设置后已开启，也可单独点“允许读取剪贴板”。此按钮只申请权限，不读取内容或调用模型。以后复制文字再按快捷键，即可读取一次并翻译。</li>
+<li>网页划词：一键设置后已开启，也可单独调整。普通网页会尝试立即接入；旧网页如还没有“译”按钮，刷新一次即可。浏览器内部页面和网上应用店不支持注入，需改用复制翻译。</li>
+</ol>
+<p>之后可选“开始真实体验”：翻译示例 → 显式保存一个领域译法 → 在下一段核对实际沿用与来源。教程使用自己的模型额度，可以随时跳过。“这段合适 / 需要调整”是评价；“纠正译法”才会明确保存词语。复制不等于认可。</p>
+<h2 id="zh-section-2">从连接开始</h2>
+<p>点击工具栏的知我图标，再点齿轮进入设置。选择厂商，粘贴对应 API Key；官方地址和推荐模型已预置，自定义网关等可在“连接选项”中调整。支持 OpenAI、Google、Anthropic、Moonshot、Zhipu、ByteDance、DeepSeek、Alibaba Cloud、xAI 和自定义兼容网关；模型预设可编辑，不代表你的账号一定拥有访问权限。兼容网关须支持 OpenAI Chat Completions。</p>
+<p>点击“保存并测试连接”可保存配置，并发送一次固定的 Hello 翻译请求。最多等待 20 秒，可停止；不发送原文历史、个人术语或自定义提示，不增加翻译记忆或学习记录。成功只说明当前请求得到完整文本回复，不认证翻译质量。模型服务可能收费。普通“保存设置”和回车保存不会自动测试。</p>
+<p>切换厂商或服务地址需使用相应 Key，不带出旧服务的 Key。Key、设置和记忆普通保存在本机浏览器的扩展存储，不同步到 Google 账号，不发给开发者。首次使用选择厂商、粘贴 Key，点击“保存并测试连接”即可；重启后直接使用。升级时沿用原安装目录，重新加载扩展后刷新已打开的阅读网页。</p>
+<p>设置顶部的“已保存连接”下拉栏可以复用之前的接口、地址、模型和对应 Key。可填写一个便于区分的连接名称；选择后只填入连接字段，阅读习惯不变，点击“保存设置”才切换生效。Key 不回填明文，留空复用所选连接的 Key。保存新的地址或模型会保留旧连接；相同接口、地址和模型再次保存会更新原条目。更换服务地址或接口后，需要填写相应 Key。可删除不再使用的保存项，译文缓存和个人译法保留。</p>
+<h2 id="zh-section-3">模型候选与来源</h2>
+<p>兼容网关的「连接选项」中可填写模型目录页面，地址和连接名称仅保存在本机。先登录目录并保存连接；打开设置或选择这条已保存连接时会自动读取候选，也可点击「获取模型列表」刷新。只使用已保存的 Key，未保存的新 Key 不发起请求。</p>
+<p>配置目录后，候选包含全部非试运行的文本型号和支持文本对话的多模态型号，不再按轻量名称限制。图片生成、语音、视频、向量、重排等与当前文本请求不兼容的专用类型仍排除。列表按名称和数值版本降序排列，例如同系列的 5.10、5.3、5.2 依次相邻。接口中出现的型号标记「接口已列出」，其余目录型号保留并标记「待验证」；接口未列出不能证明没有调用权限，接口已列出也不等于实际请求一定成功。连接测试用于确认所选型号当前能否调用。</p>
+<p>目录没有加载完整或登录失效时会说明情况。未配置目录时，仍推荐 Flash、Luna、Mini、Nano、Lite、Haiku 等轻量文本系列；模型接口本身可能不提供试运行标记。目录列表在本机缓存最多 1 小时，主动刷新可立即重新读取。</p>
+<p>刷新候选不会替换当前模型。选择候选后保存生效，也可以继续手动填写。部分厂商没有预置轻量型号，保留手动填写入口。目录样式变化可能影响自动读取。</p>
+<p>译文上方显示本次使用的服务、连接名称或域名前缀，以及完整模型 ID。历史译文使用当时记录的模型；旧记录缺少该信息时显示「模型未记录」。</p>
+<h2 id="zh-section-4">划词、快捷键与窗口</h2>
+<ul>
+<li>网页选中文字，点击小“译”按钮；设置可改为直接翻译、双击或按住修饰键触发。</li>
+<li>Cmd+D（Mac）/ Ctrl+D（Windows）在网页有选区时翻译选区；无选区时不拦截，仍是浏览器的“加入书签”。如需无选区也打开独立窗口（已经允许剪贴板读取时读取一次并翻译，未授权则在窗口点击“粘贴并翻译”），可在设置中把页面快捷键改为 Alt+D 或 Cmd+Shift+Y。没有后台剪贴板监听。</li>
+<li>在阅读窗口里，快捷键优先使用当前输入。改动原文后点击“翻译”或按 Cmd+Enter / Ctrl+Enter；输入过程不发请求。</li>
+<li>普通文本框和可编辑正文中的明确选区可翻译；密码框及专业代码编辑器不截获网页快捷键。</li>
+<li>浮窗右上角 ↗ 把已有译文带到独立窗口，不重复请求；右键菜单也可翻译选区。</li>
+<li>浏览器级快捷键可在设置中查看、跳转配置。默认 Cmd+Shift+Y（Mac）/ Alt+Shift+Y（Windows）；若改成 Cmd+D，请绑定“打开知我翻译窗口”，而非“激活该扩展程序”。其他扩展的冲突绑定需要在 Chrome 中移除。</li>
+<li>可设置连按三次 Cmd / Ctrl，以及将新选区送入已打开的独立窗口。</li>
+</ul>
+<p>网页浮窗可拖标题栏、固定、拖四边或四角缩放；位置与尺寸在松手后保存。Esc 先收起打开的操作菜单，再关闭未固定的浮窗。独立窗口使用浏览器原生拖动与缩放。工具栏弹窗由 Chrome 定位，需要自由移动时点 ↗。</p>
+<p>网页快捷键需要启用划词、网站权限和刷新后的页面。Chrome 网上应用店、浏览器内部页和本地文件存在划词限制，工具栏弹窗或独立窗口会显示原因并提示复制翻译。内置 PDF 阅读器也可能无法取词，可复制到独立窗口。系统桌面和全屏策略可能影响独立窗口出现的位置。</p>
+<h2 id="zh-section-5">语言、风格与排版</h2>
+<p>源语言和目标语言可手动选择。自动模式在首选语言与备用语言之间转换；判断不准时直接指定。交换语言会把完成的译文放回输入区，点击翻译再提交。</p>
+<p>“原文语气 / 商务表达 / 清晰易读 / 学术严谨”是表达风格，不是专业领域。更换语言或风格后，非空原文会按新选择翻译；精确缓存存在时直接复用。原意、否定、不确定性、数字和引用始终应保留。</p>
+<p>Markdown 标题、列表、引用、删除线、代码及表格直接呈现。结构明确的重复记录可整理为表格，字段不齐的记录使用紧凑卡片；只标注原文确实缺少的字段，不补造缺失信息。无法可靠识别时保留原顺序。流式完成后再整理结构，减少表格跳动。</p>
+<p>表头使用浅灰底，宽表在表格内滚动，深色模式同步适配。数字未找到完整对应时出现可展开的“数字核对”；它可能提示合法的数字写法变化，不认证整体语义质量，也不自动改文或重试。</p>
+<p>支持 TXT / Markdown 文件（最多 200 KB），每次最多 20,000 字符。超长粘贴和文件内容完整保留，并提示实际长度，需要主动缩短后才发送。超长网页选区会提示缩小选区，不转发截断片段，也不覆盖已有草稿。暂不支持 OCR、整份 PDF 上传或系统级取词。</p>
+<h2 id="zh-section-6">复制与重新翻译</h2>
+<p>“复制译文”复制完整的可读内容；悬停段落、列表、表格或代码块，或用 Tab 聚焦，可复制单块。表格按行和制表符分列，代码保留缩进。⋯ 菜单中的“复制 Markdown”保留原始 Markdown 标记，不包含界面按钮与记忆标注。</p>
+<p>⋯ →“重新翻译”只刷新本次请求，不清除其他缓存。新文字到达前保留旧译文；请求失败或在首字出现前停止，仍能继续阅读旧结果。限流不会自动重试。</p>
+<p>复制不请求模型，也不代表你认可译法，不会自动新增个人偏好。</p>
+<h2 id="zh-section-7">译文缓存</h2>
+<p>新安装默认保留 30 天，可设 1–365 天；升级保留原设置。最多 500 条 / 约 6 MiB，达到上限淘汰较旧记录。按生成时间过期，查看或缓存命中不续期。失败、取消和不完整的结果不写入成功缓存。</p>
+<p>缓存区分原文、语言、实际提示、模型、服务和账号；相同请求直接复用，同时到达的相同请求合并。相关偏好变化会生成新结果，无关术语不使本段缓存失效。缓存不是一次新的学习，也不是服务提供方的 prompt/chat cache。</p>
+<p>“翻译记忆”可搜索、阅读旧结果，不请求模型。关闭“存入翻译记忆”停止自动复用和新增，已有记录保留。单条“移除”在 60 秒内可撤回上一次；不延长缓存有效期，不覆盖更新结果。清空译文不删除个人术语或反馈。历史结果保留生成时的语言、风格和记忆来源，修正重译沿用该条上下文。</p>
+<h2 id="zh-section-8">按领域记住你的译法</h2>
+<p>点击译文下“纠正译法”，填写原文术语、偏好译法和领域。选中原文或译文中的短语可快速填入。“记住并重译”保存后刷新本段；“仅记住”保存供后续内容使用，不再次调用模型。</p>
+<p>系统在本机根据原文线索建议领域。领域不明确或冲突时不套用专门译法；“通用 · 跨领域”允许跨领域使用，“仅相似语境”要求至少两条保存的上下文线索。支持 AI、医学、金融、法律、房地产、自然科学，以及自己的课题领域。这是保守的局部匹配，不是通用语义理解。</p>
+<p>实际出现保存的目标词时，显示“已沿用你的译法”和词语对应；正文首次出现处加淡下划线。点击可查看保存时间、领域、手动或 AI 建议来源，再修正或撤回。模型未使用目标词时不宣称已沿用。缓存沿用原始来源，不作为新学习。</p>
+<p>表达与排版习惯在设置中按领域保存。个人偏好不随缓存过期，最多 12 个自定义领域、100 个术语版本、40 个表达习惯版本及 200 条变更记录。每项最多保留 12 个上下文词；普通请求附加偏好总计最多 512 UTF-8 字节，不发送完整历史。</p>
+<h3>备份与迁移</h3>
+<p>设置 → 个人译法 → 备份与迁移，可导出术语、领域关键词和表达偏好。JSON 是明文，不含 Key、原文历史、反馈、学习证据或使用次数；文件中的专业词语仍属于你的数据。</p>
+<p>导入前先显示新增、重复与冲突项，确认后才保存到当前已配置的连接；冲突保留已有译法，不覆盖。导入项作为手动偏好，原先试用或暂停的条目保持暂停，不恢复旧的晋级证据。10 分钟内可撤回本次新增。文件最多 128 KB，非法或超量文件不会部分导入。备份不等于云同步。</p>
+<h2 id="zh-section-9">反馈与有限 AI 建议</h2>
+<p>先选“这段合适”或“需要调整”，再点“确认反馈”保存；可取消草稿、修改或撤回。整段反馈不会立即变成术语偏好。普通阅读、复制与无操作不视为认可。</p>
+<p>在同一目标语言、风格和领域积累三段不同反馈，其中至少两段合适或明确纠正后，可在设置点击“生成建议 · 1 次 AI 请求”。模型仅能提出短术语或预设表达/排版选项，须引用至少两段有效依据。没有充分依据时允许不提出建议。检查后“确认并记住”才供后续相关内容使用；随时可撤回。</p>
+<p>自动建议默认关闭，开启后只在翻译或反馈后的空闲机会整理，没有持续后台任务。主动与自动共用每个连接每 24 小时一次：最多六段、8 KiB 输入、请求输出上限 1,024 token、20 秒，无自动重试。失败、停止、空建议也可能计费并占用额度。新翻译优先停止建议请求。</p>
+<p>最多 60 段反馈，保留 90 天。删除反馈也删除依赖的建议和证据副本；已确认的译法可单独撤回。切换服务或账号会关闭自动建议。它不能修改模型、Key、基础提示、代码或权限，不训练模型权重，也不承诺翻译质量自动提高。</p>
+<h3>术语试用核对（高级）</h3>
+<p>手动记忆是默认方式。需要试用核对时，先保存连接与翻译设置，点“检查当前模型 · 2 次请求”；通过后选择有限学习并保存。检查只验证两条合成文本中的术语、数字、代码，不认证完整语义质量，不要求特定模型规模或工具能力。</p>
+<p>每次最多附加 2 条术语、其中最多 1 条试用，共享 512 字节偏好上限。最多 3 条并行试用，每条最多 5 个不同后续原文；3 次通过保留，连续 2 次失败或预算耗尽则暂停。缓存、重复段落和原始纠正样本不计证据。这些核对在本机完成，不增加翻译调用。</p>
+<p>模型检查每条最多 4,096 输入字节、请求 1,024 输出 token、15 秒超时；每 24 小时最多三轮，至少间隔一分钟。检查有效 30 天，相关配置变化后失效。通过不自动启用学习；手动模式不应用试用项。</p>
+<h2 id="zh-section-10">Markdown 智能转录</h2>
+<p>“阅读习惯”中默认开启，译文按 Markdown 渲染。关闭后，标记、换行、缩进、链接地址、代码块和行内代码由本机原样保留，仅把其间的文字片段交给模型翻译；结果按等宽源码显示，复制保留标记。纯代码无需调用模型。两种模式独立缓存，历史记录保留生成时的显示模式。</p>
+<p>源码模式仍只发一次翻译请求，使用有序片段返回格式；可能比整段翻译多一些结构字段。会逐步展示完成的片段，模型未遵守结构时提示失败，不自动重试、不把错误结果写入缓存。残缺 Markdown 保守保留，不补齐原文结构。</p>
+<h2 id="zh-section-11">关联阅读</h2>
+<p>共同术语、代码、文献标识，或明确领域内的共同短语，可以形成历史关联。只有有内容时显示入口；展开后是“当前译文 → 关联依据 → 历史片段”，最多三条。单个模糊词不构成联系。点击阅读不请求模型，“不相关”可隐藏这对联系。它不是因果关系，也不会自动把历史译文加入当前提示。</p>
+<h2 id="zh-section-12">常见问题</h2>
+<p>快捷键无响应：查看实际浏览器快捷键及其他扩展冲突，检查启用划词、网站权限和页面刷新。界面与后台版本不一致时按提示重新加载。</p>
+<p>HTTP 429：按服务返回信息区分频率限制与额度不足；有 Retry-After 时显示等待。仅凭状态码不能判断具体原因。等待结束只恢复手动操作，不自动发送。</p>
+<p>翻译慢：界面显示服务已经返回的文字，网络等待与模型生成需分别判断。普通翻译最多 90 秒，可主动停止。不要把一次网络测试视为网关整体速度结论。</p>
+<p>界面语言默认跟随浏览器（中文环境显示中文，其他显示 English），也可在设置中固定为中文或 English；不改变原文、模型输出或个人术语。KnowMe 是独立项目，并非模型厂商官方产品。应用代码独立实现，依赖许可随扩展提供。</p>
+<hr>
+</article><article data-doc-language="en" id="english" lang="en" hidden><h1 lang="en">KnowMe AI Translate · 1.0.2</h1>
+<p>A personal translation reader for Chrome 116+, using your own model key or an authorized compatible gateway.</p>
+<h2 id="en-section-1">First-use setup and optional walkthrough</h2>
+<p>First installation opens Quick start. Click Enable essentials and confirm webpage access and clipboard reading together. This enables the selection button, Markdown formatting and reuse of an existing reader. Granting access does not read the clipboard or translate anything.</p>
+<p>Fully authorized users are not interrupted on update. An existing user missing access receives one setup reminder; rejection or dismissal is not retried automatically. Individual controls remain under Check status or configure separately.</p>
+<p>Your model still needs your own API key. In Settings, import a connection template if one is available, check its service URL, enter your key and save. Templates contain no key, history or reading preferences. Importing fills the form without saving it or making requests.</p>
+<p>Quick start shows four independent states: saved model connection, the actual browser command, clipboard access and webpage selection. Open it from the reader header or Settings. A saved connection is not a successful network test: save and test your provider separately.</p>
+<p>Use Set shortcut to open the browser settings for Open the KnowMe reader. The default is ⌘⇧Y on Mac and Alt+Shift+Y on Windows. The extension does not automatically assign ⌘D or change other shortcuts.</p>
+<p>The essentials button covers both clipboard and selection access; separate controls remain available. Permission buttons do not read clipboard text or send a model request. Existing ordinary webpages are connected when possible; refresh a page if its selection button has not appeared. Browser-internal pages and the Web Store require copying instead. Denied permissions remain optional, and status is checked again when you return.</p>
+<p>Then optionally translate an example, explicitly save a term, and inspect its actual use in a new passage. This uses your configured model and quota. A rating saves an evaluation; a correction saves specific wording.</p>
+<h2 id="en-section-2">Connect and read</h2>
+<p>Open the toolbar icon, then Settings. Choose OpenAI, Google, Anthropic, Moonshot, Zhipu, ByteDance, DeepSeek, Alibaba Cloud, xAI or an OpenAI-compatible gateway. Presets are editable; availability depends on your account. A new provider or endpoint requires its own key.</p>
+<p>Choose a provider and paste its API key, then click Save and test connection. The official endpoint and recommended model are prefilled; use Connection options for overrides. Keys, settings and memory stay in ordinary local extension storage without Google-account sync or transmission to the developer. Browser restarts need no extra step. Keep the same extension directory and ID when updating an existing installation.</p>
+<p>Use Saved connections at the top of Settings to restore a provider, endpoint, model and its saved key. You can name each connection. Selecting fills only connection fields; click Save settings to apply it. Saved keys are not displayed in the form: leave the key blank to reuse the selected connection's key. Saving a new endpoint or model keeps previous entries; saving the same provider, endpoint and model updates that entry. A different provider or endpoint needs its own key. Deleting an unused saved entry preserves translation history and personal wording.</p>
+<p>Save &amp; test connection saves your settings and sends one fixed Hello translation, with a 20-second timeout and a Stop button. It sends no history, personal terms or custom instructions and creates no memory or learning record. A pass means a complete text response, not translation-quality certification. Ordinary Save and Enter do not run a test. Provider charges may apply.</p>
+<p>Select text and use the small translate button, configured page shortcut or context menu. Cmd+D / Ctrl+D translates a page selection; with no selection it is left to the browser's bookmark command. With Alt+D or Cmd+Shift+Y as the page shortcut, no selection opens the reader and reads the clipboard once only if permission already exists. Use Allow clipboard access in Quick start, or Paste &amp; translate in the reader, for the first permission request. Inside the reader, the current draft has priority. There is no background clipboard monitoring.</p>
+<p>Edit the visible source and press Translate or Cmd+Enter / Ctrl+Enter; typing alone sends nothing. Native browser shortcuts are shown in Settings. Assign Open reader, not Activate extension, and resolve competing extension shortcuts in Chrome. Refresh reading pages after an extension reload. Password fields and code editors retain their page shortcuts.</p>
+<p>Drag the webpage panel by its title bar and resize any edge or corner. Position and size save on release. Escape closes a menu before the unpinned panel. The separate reader uses native window controls. Open in window transfers a completed result without generating it again. Browser-internal and built-in PDF pages cannot host the panel; paste their text into the reader.</p>
+<h2 id="en-section-3">Model suggestions and translation source</h2>
+<p>Compatible gateways can have a local model-directory URL under Connection options. Sign in to the directory, then save the connection. Settings automatically refresh suggestions for saved connections with a directory; the refresh button can fetch a new list. Unsaved keys are never used for discovery.</p>
+<p>A configured directory supplies all non-trial text models, including multimodal models that support text conversations. These are not restricted to lightweight model names. Image-generation, audio, video, embedding, reranking and other incompatible specialty models remain excluded. Names and numeric versions sort descending, so versions such as 5.10, 5.3 and 5.2 stay together. Each option is marked API-listed or Unverified; directory models missing from the API list remain selectable. Neither membership nor omission proves actual inference access. Test the selected connection to check it.</p>
+<p>Without a directory, suggestions still favor lightweight Flash, Luna, Mini, Nano, Lite and Haiku families. Incomplete directory reads and sign-in problems are reported. Lists are cached locally for up to one hour; manual refresh reads them again. Directory layout changes can affect discovery.</p>
+<p>Refreshing never replaces your current model. Select and save to apply a change, or keep a manually entered model. The translation header shows the service, local connection name or hostname prefix, and actual model ID. Historical translations retain their recorded model; older records without one say “Model not recorded.”</p>
+<h2 id="en-section-4">Language, style and format</h2>
+<p>Choose languages explicitly when automatic detection is wrong. Original tone, Business wording, Clear wording and Academic precision are style presets, not domains. Changing language or style translates nonempty input using that selection; an exact cache hit is reused.</p>
+<p>Markdown headings, lists, tables, strikethrough and code render directly. Clear repeated records may become tables; incomplete records use compact cards. Missing information is never invented by the local formatter. Structure settles after streaming. Wide tables scroll inside their own frame. Local number checks flag unmatched values without silently changing or retrying text; legitimate formatting changes can also trigger a flag.</p>
+<p>Open TXT/Markdown files up to 200 KB; each request allows 20,000 source characters. Oversize pasted text and files are retained in full and blocked from sending until shortened. An oversize webpage selection prompts you to shorten the selection; no truncated passage is forwarded and existing drafts are preserved. Whole-PDF upload, OCR and system-wide text capture are not included.</p>
+<p>Copy the entire result or hover/focus a paragraph, list, table or code block to copy that block. More → Copy Markdown preserves raw Markdown. Copying is not approval and creates no preference. More → Translate again refreshes this request only; other cached passages remain. The previous result stays readable until new text arrives, including failure or cancellation before the first new chunk.</p>
+<h2 id="en-section-5">Cache, personal wording and feedback</h2>
+<p>Fresh installs retain exact successful results for 30 days, adjustable to 1–365; upgrades retain their setting. Limits are 500 entries / about 6 MiB. Age starts at generation and is not renewed by reuse. Source, languages, actual instructions, model, endpoint and account separate cache identities; concurrent identical requests share generation. Failed or incomplete output is not cached. Unrelated new terms do not invalidate a passage.</p>
+<p>Translation memory supports search and reading without a model call. Remove one record with a 60-second undo of the last removal; restoring never extends expiry or overwrites a newer result. Disabling Remember translation stops automatic reuse and new saves. Clearing translations does not delete personal wording or feedback. Cache is not learning or provider prompt caching.</p>
+<p>Correct wording saves a source term, preferred translation and domain. Remember &amp; translate again refreshes this passage; Remember only affects future matching passages. Source or output selection can prefill the editor. Conservative local cues select relevant domains; ambiguous evidence skips specialized wording. Similar contexts needs two saved context cues, while General is explicitly cross-domain.</p>
+<p>When the preferred text actually appears, a subtle underline and term pair show its origin. Click to inspect or revise it. Missing wording is not called adopted. Cached output preserves its original receipt. Writing/layout choices live in Settings. Up to 12 custom domains, 100 term versions, 40 style versions and 200 change events are retained. Personalization adds at most 512 UTF-8 bytes per request, not a full history.</p>
+<p>Backup &amp; migration exports plain JSON containing terms, domain cues and style choices, without keys, source history, feedback, learning evidence or usage counts. Preview before confirming import; existing conflicts are kept and duplicates skipped. Imported entries are manual preferences, with prior trials/paused entries remaining paused. Undo newly imported entries within ten minutes. Maximum file size is 128 KB; invalid files are not partially imported. This is not cloud sync.</p>
+<p>Choose Works for me or Needs revision, then Confirm feedback. Cancel, edit or undo anytime. Passage approval is not an immediate glossary rule, and copying never implies approval.</p>
+<p>After three distinct feedback passages in the same language, style and domain, including two positive or corrected examples, Find suggestions makes one model request. It may propose short term pairs or preset style choices with at least two supporting excerpts. Review and confirm before later translations use it. An empty result is valid.</p>
+<p>Automatic suggestions are off by default. Manual and automatic runs share one attempt per connection per 24 hours: at most six excerpts, 8 KiB input, 1,024 requested output tokens and 20 seconds, without retries. Failed, stopped or empty runs count and may be billed. New translations cancel suggestion work. Feedback is limited to 60 passages / 90 days. Deleting it removes dependent proposals and evidence; confirmed terms remain separately manageable. Changing account or service disables automatic suggestions.</p>
+<p>This adapts bounded preferences, not model weights, code, keys or permissions. It does not guarantee better translation quality.</p>
+<h2 id="en-section-6">Smart Markdown formatting</h2>
+<p>Enabled by default in Reading habits. Turn it off to retain source markers, line breaks, indentation, link destinations, fenced code and inline code locally. Only prose fragments are translated. Results display and copy as monospaced source. Code-only input requires no model request. Each mode has a separate cache; saved results retain their original display mode.</p>
+<p>Source mode uses one translation request with an ordered-fragment response, adding some structural tokens. Completed fragments appear progressively. Invalid structure produces an error without retrying or caching the invalid response. Incomplete markup is retained conservatively.</p>
+<h2 id="en-section-7">Optional checks and related reading</h2>
+<p>Advanced term trials require an explicit two-request model check and separate opt-in. Each check uses synthetic text, at most 4,096 input bytes and 1,024 requested output tokens per request, with a 15-second timeout; at most three checks per 24 hours, one minute apart. A pass lasts 30 days unless relevant settings change. It checks terms, numbers and code, not complete semantic quality.</p>
+<p>At most three trials run, five distinct later passages per trial. Three local passes retain a term; two consecutive failures or exhaustion pause it. Each translation includes at most two terms, at most one trial, within the shared 512-byte budget. Original correction examples, duplicates and cache hits do not count. These local checks add no generation requests.</p>
+<p>Related reading uses shared terms, code, citations or domain-supported phrases. Expand up to three links through their actual evidence. Reading links makes no model calls and does not inject history into translation prompts. Dismiss unrelated pairs or turn it off.</p>
+<h2 id="en-section-8">Problems and control</h2>
+<p>HTTP 429 may mean a rate limit or exhausted quota; use the service's error details and Retry-After. Expiry of a wait enables a manual retry only. Ordinary translation times out after 90 seconds. Network delay and generation speed are separate measurements.</p>
+<p>The interface follows the browser language by default (Chinese in Chinese browsers, otherwise English) and can be fixed to either in Settings. Themes follow the system unless specified. KnowMe is independent from model providers; third-party licenses ship with the extension.</p>
+<h2 id="en-section-9">更少配置，清楚的记忆反馈</h2>
+<p>选择厂商、粘贴 API Key 后，点击“保存并测试连接”。官方地址与推荐模型已填好；自定义网关、其他模型和地域地址仍可在“连接选项”修改。推荐不代表账号必有权限。默认自动中英互译。</p>
+<p>译文顶部“本次沿用 N 条译法”只统计请求带入且实际出现在正文中的个人词语；悬停下划线查看来源、保存时间和领域。模型自行给出相同译法不算记忆沿用。</p>
+<p>精确缓存命中显示“已复用本机缓存 · 0 次请求 · 用时 x ms”；该用时属于本次本机查询，不是历史模型速度。</p>
+<p>设置中的“演化记录”按分支显示已有反馈、AI 建议、采用或撤回、以及仍保留的后续译文。点节点看证据，点相应操作撤回；删除历史后一分钟内可恢复。最多展示最近 40 条偏好/建议，每条最多 8 段近期译文。展开视图不联网、不生成新建议。风格只标为“参考”，不声称证明了表达变化。</p>
+<h3>Memory feedback and local evolution</h3>
+<p>Choose a provider and paste your API key; an official endpoint and suggested model are prefilled. Custom gateways, aliases and regional endpoints remain editable. Availability depends on your account.</p>
+<p>Applied-term underlines identify saved wording that was both included in the request and found in translated prose. Cache receipts show zero new requests and the local lookup time. Settings → Evolution history shows existing feedback, proposals, adoption or withdrawal, and retained later translations. Open a node for evidence or a reversible action. This view makes no model request and does not claim causality for style references.</p>
+</article></div></main><footer class="site-footer shell"><a class="brand" href="index.html" data-home><img src="assets/knowme.svg" width="30" height="30" alt=""><span>KnowMe</span></a><p data-zh="轻一点，读深一点。" data-en="Lightweight tools. Deeper reading.">轻一点，读深一点。</p><div><a href="index.html" data-home data-zh="返回官网" data-en="Back to the website">返回官网</a><span class="contact-entry"><button type="button" aria-describedby="contact-email" data-zh="联系" data-en="Contact">联系</button><span class="contact-email" id="contact-email" role="tooltip">hackerchenzhuo@gmail.com</span></span><a href="https://github.com/hackerchenzhuo" target="_blank" rel="noopener noreferrer">ZhuoCs ↗</a></div></footer></body></html>
